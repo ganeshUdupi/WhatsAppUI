@@ -12,11 +12,11 @@ import androidx.compose.ui.platform.LocalView
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 
 private val DarkColorScheme = darkColorScheme(
-    primary = Grey, secondary = LightGrey, background = LightGrey
+    primary = Grey, secondary = LightGrey, background = LightGrey, tertiary = Color.White
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = Green, secondary = LightGreen, background = Color.White
+    primary = Green, secondary = LightGreen, background = Color.White, tertiary = Color.White
 )
 
 @Composable
