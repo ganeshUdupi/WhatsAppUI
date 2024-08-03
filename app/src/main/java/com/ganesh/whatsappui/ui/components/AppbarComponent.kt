@@ -33,7 +33,8 @@ fun AppbarComponent() {
         modifier = Modifier
             .fillMaxWidth()
             .height(60.dp)
-            .background(MaterialTheme.colorScheme.primary).padding(top = 30.dp, bottom = 5.dp, end = 10.dp, start = 10.dp),
+            .background(MaterialTheme.colorScheme.primary)
+            .padding(16.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Text(
