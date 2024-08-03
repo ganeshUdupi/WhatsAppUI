@@ -12,6 +12,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.ganesh.whatsappui.data.INITIAL_SCREEN_INDEX
 import com.ganesh.whatsappui.data.tabs
 import com.ganesh.whatsappui.ui.components.AppbarComponent
+import com.ganesh.whatsappui.ui.components.TabsComponent
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalFoundationApi::class)

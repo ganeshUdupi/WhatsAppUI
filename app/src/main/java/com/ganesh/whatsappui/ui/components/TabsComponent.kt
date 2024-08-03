@@ -1,4 +1,4 @@
-package com.ganesh.whatsappui.ui.screens
+package com.ganesh.whatsappui.ui.components
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
@@ -25,13 +25,12 @@ import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.ganesh.whatsappui.data.TabData
-import com.ganesh.whatsappui.data.Tabs
 import com.ganesh.whatsappui.data.tabs
 import kotlinx.coroutines.flow.collectLatest
 
@@ -99,6 +98,11 @@ fun TabWithUnReadCount(tabData: TabData) {
     ) {
         TabTitle(title = tabData.title)
         tabData?.unreadCount.also { unreadCount ->
+            CircularCount(
+                unreadCount = unreadCount.toString(),
+                backgroundColor = MaterialTheme.colorScheme.background,
+                textColor = Color.White
+            )
             Text(
                 text = unreadCount.toString(),
                 modifier = Modifier
