@@ -76,7 +76,8 @@ fun TabsComponent(initialIndex:Int =0,
 @Composable
 fun TabTitle(title: String) {
     Text(
-        text = title, style = TextStyle(
+        text = title,
+        style = TextStyle(
             fontSize = 16.sp
         )
     )
@@ -94,7 +95,8 @@ fun TabContent(tabData: TabData) {
 @Composable
 fun TabWithUnReadCount(tabData: TabData) {
     Row(
-        verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.Center
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.Center
     ) {
         TabTitle(title = tabData.title)
         tabData?.unreadCount.also { unreadCount ->
@@ -102,20 +104,6 @@ fun TabWithUnReadCount(tabData: TabData) {
                 unreadCount = unreadCount.toString(),
                 backgroundColor = MaterialTheme.colorScheme.background,
                 textColor = Color.White
-            )
-            Text(
-                text = unreadCount.toString(),
-                modifier = Modifier
-                    .padding(4.dp)
-                    .size(16.dp)
-                    .clip(CircleShape)
-                    .background(MaterialTheme.colorScheme.background),
-                style = TextStyle(
-                    color = MaterialTheme.colorScheme.primary,
-                    textAlign = TextAlign.Center,
-                    fontSize = 12.sp
-                )
-
             )
         }
 

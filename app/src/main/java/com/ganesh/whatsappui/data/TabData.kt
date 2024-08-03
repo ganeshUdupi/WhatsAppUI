@@ -6,9 +6,9 @@ data class TabData(
 )
 
 val tabs = listOf(
-     TabData(title = Tabs.CALLS.value, unreadCount = 4),
+     TabData(title = Tabs.CHATS.value, unreadCount =null),
      TabData(title = Tabs.STATUS.value, unreadCount = null),
-     TabData(title =Tabs.CALLS.value, unreadCount = 4 )
+     TabData(title =Tabs.CALLS.value, unreadCount = null )
 )
 enum class Tabs(val value: String){
     CHATS("Chats"),
